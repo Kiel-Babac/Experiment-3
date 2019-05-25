@@ -1,0 +1,43 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main ()
+{
+double ave;
+int j, i, big, small, add, c, arr[10];
+
+
+for (c = 0; c < 10; c++)
+{
+cout << "Input Integer " << c + 1 << ": ";
+cin >> arr[c];
+add =+ arr[c];
+ave = add / 10;
+}
+
+j = 0;
+for ( c = 0; c < 10; c++)
+{
+if (arr[j] < arr[c])
+j = c;
+big = arr[j];
+}
+
+i = 0;
+for ( c = 0; c < 10; c++)
+{
+if (arr[i] > arr[c])
+i = c;
+small = arr[i];
+}
+
+cout << "The Smallest Integer : " << small << endl;
+cout << "The Largest Integer : " << big << endl;
+cout << "The Total Sum is : " << add << endl;
+cout << "The Average is : " << ave << endl;
+
+_getch();
+return 0;
+}
